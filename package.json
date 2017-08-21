@@ -1,0 +1,22 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lukashoegh/lukashoegh.github.io.git"
+  },
+  "author": "Lukas Knudsen Høgh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukashoegh/lukashoegh.github.io/issues"
+  },
+  "homepage": "https://github.com/lukashoegh/lukashoegh.github.io#readme",
+  "dependencies": {
+    "time-ago": "^0.1.0"
+  }
+}
