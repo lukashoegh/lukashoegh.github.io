@@ -317,3 +317,49 @@ a {
     left: -40%;
   }
 }
+
+@media (max-height: 765px) {
+  h2 {
+    font-size: 30px;
+    margin-top: 15px;
+  }
+
+  section.active article {
+    margin-top: -10px;
+
+  }
+
+  h2::after {
+    margin-top: 8px;
+  } 
+  dt {
+    margin-top:5px;
+  }
+
+  h3, .floating-figure {
+    margin-top: 8px;
+  }
+
+  p {
+    margin: 3px 0;
+  }
+
+  h4 {
+    margin: 15px 0 10px 0;
+  }
+
+  ul li {
+    font-size: 12px;
+    line-height: 100%;
+  }
+
+  ul li a {
+    text-decoration: underline;
+    background-color: transparent;
+    color: rgb(30,30,30);
+  }
+
+  ul li a:hover {
+    text-decoration: none;
+  }
+}
