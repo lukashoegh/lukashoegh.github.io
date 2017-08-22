@@ -298,3 +298,21 @@ a {
 .techlist li {
   position: relative;
 }
+
+@media (max-width: 1300px) {
+  section {
+    width: 12%;
+  }
+
+  section.active {
+    width: 52%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  footer {
+    left: -40%;
+  }
+}
