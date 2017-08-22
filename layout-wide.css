@@ -1,0 +1,300 @@
+body, html {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(30, 30, 30);
+}
+
+address {
+  white-space: pre-line;
+}
+
+h2 {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 30px 20px 10px 20px;
+  position: relative;
+  left: 30%;
+  transition: all 1s;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: white;
+  display: inline-block;
+  padding: 5px 30px 5px 5px;
+  min-width: 200px;
+  margin: 20px 0 0 0;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: rgb(30,30,30);
+  border: 10px solid rgb(30,30,30);
+  border-width: 0 0 0 10px;
+  padding: 0 0 0 5px;
+}
+dt {
+  margin: 20px 0 0 0;
+  padding: 0 0 4px 0;
+  font-size: 14px;
+}
+dt::after {
+  content: ":";
+}
+dd {
+  border: 1px solid rgb(124,124,124);
+  border-width: 1px 0 0 1px;
+  display: inline-block;
+  min-width: 200px;
+  padding: 5px;
+}
+p {
+  font-size: 14px;
+  margin: 10px 0;
+  max-width: 670px;
+}
+ul {
+  font-size: 14px;
+}
+ul li {
+  margin: 0 0 10px 0;
+  list-style-type: square;
+  list-style-position: inside;
+  font-size: inherit;
+}
+section.active h2, section.active article {
+  left: 15%;
+}
+section:nth-of-type(1) h2, section:nth-of-type(1) article {
+  left: 0;
+}
+footer {
+  position: relative;
+  left: -20%;
+  transition: all 1s;
+}
+section.active footer {
+  opacity: 0;
+}
+section:nth-of-type(5) footer {
+  left: -10%;
+}
+
+h2::after {
+  content: "";
+  display: block;
+  border: 5px solid rgba(255,255,255,0.7);
+  border-width: 5px 0 5px 0;
+  height: 7px;
+  width: 60%;
+  margin-top: 20px;
+  transition: all 1s;
+}
+
+section {
+  display: block;
+  float: left;
+  width: 15%;
+  height: 100%;
+  position: relative;
+  transition: width 1s;
+  cursor: pointer;
+}
+section.active {
+  width: 40%;
+  cursor: auto;
+}
+section > * {
+  position: relative;
+  z-index: 2;
+}
+
+section:nth-of-type(1) {
+  z-index: 5;
+}
+section:nth-of-type(2) {
+  z-index: 4;
+}
+section:nth-of-type(3) {
+  z-index: 3;
+}
+section:nth-of-type(4) {
+  z-index: 2;
+}
+section:nth-of-type(5) {
+  z-index: 1;
+}
+
+section article {
+  display: block;
+  margin: 10px 20px;
+  width: 70%;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+  transition-delay: 1s;
+  line-height: 120%;
+}
+section.active article {
+  visibility: visible;
+  opacity: 1;
+}
+section:nth-of-type(1) article {
+  width: 90%;
+}
+
+section::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -25%;
+  z-index: 1;
+  width: 200%;
+  height: 150%;
+  transform: rotate(7deg) translateX(-50%);
+  transform-origin: 10% left;
+  transition: all 1s;
+}
+
+
+section:nth-of-type(1)::after {
+  background-color: rgb(0, 174, 255);
+  box-shadow: 0 0 30px 0 rgb(0, 174, 255); 
+}
+section:nth-of-type(1) h3 {
+  background-color: rgb(0, 174, 255);
+}
+section:nth-of-type(1) h4 {
+  border-color: rgb(0, 174, 255);
+}
+
+
+
+section:nth-of-type(2)::after {
+  background-color: rgb(115, 203, 150);
+  box-shadow: 0 0 30px 0 rgb(115, 203, 150); 
+}
+section:nth-of-type(2) h3 {
+  background-color: rgb(115, 203, 150); 
+}
+section:nth-of-type(2) h4 {
+  border-color: rgb(115, 203, 150); 
+}
+
+
+section:nth-of-type(3)::after {
+  background-color: rgb(38,54,148);
+  box-shadow: 0 0 30px 0 rgb(38,54,148); 
+}
+section:nth-of-type(3) h3 {
+  background-color: rgb(38,54,148); 
+}
+section:nth-of-type(3) h4 {
+  border-color: rgb(38,54,148); 
+}
+
+
+section:nth-of-type(4)::after {
+  background-color: rgb(26, 232, 225);
+  box-shadow: 0 0 30px 0 rgb(26, 232, 225); 
+}
+section:nth-of-type(4) h3 {
+  background-color: rgb(26, 232, 225); 
+}
+section:nth-of-type(4) h4 {
+  border-color: rgb(26, 232, 225); 
+}
+
+
+section:nth-of-type(5)::after {
+  background-color: rgb(255, 188, 58);
+  box-shadow: 0 0 30px 0 rgb(255, 188, 58);
+  width: 300%;
+}
+section:nth-of-type(5) h3 {
+  background-color: rgb(255, 188, 58); 
+}
+section:nth-of-type(5) h4 {
+  border-color: rgb(255, 188, 58);
+}
+
+
+section.active::after {
+  background-color: white;
+  box-shadow: 0 0 30px 0 white; 
+}
+
+section.active h2 {
+  color: rgb(30,30,30);
+}
+section.active h2::after {
+  border-color: rgb(30,30,30);
+}
+
+footer {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  transition: all 1s;
+}
+
+.infocol {
+  width: 50%;
+  min-width: 200px;
+  float: left;
+}
+.infocol:first-of-type {
+  clear: left;
+}
+
+.flag {
+  padding: 0 4px 0 0;
+}
+
+.floating-figure {
+  float: left;
+  margin: 20px 20px 10px 0;
+  border: 1px solid rgb(30,30,30);
+  padding: 1px;
+}
+.floating-figure img {
+  display: block;
+}
+
+a {
+  color: white;
+  background-color: rgb(124,124,124);
+  text-decoration: none;
+}
+
+.course-list {
+  font-size: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+.extra-info {
+  position: absolute;
+  background-color: rgb(30,30,30);
+  color: white;
+  top: -5px;
+  left: -5px;
+  font-size: 12px;
+  padding: 2px;
+}
+
+.techlist li {
+  position: relative;
+}
