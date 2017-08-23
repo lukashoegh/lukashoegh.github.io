@@ -9,7 +9,7 @@ const HIGH = 'HIGH';
 const MED = 'MED';
 const TASTE = 'TASTE';
 
-var makeTech = (level, name, info) => {
+function makeTech (level, name, info) {
   return {
     level: level,
     name: name,
@@ -31,8 +31,8 @@ var techs = [
 ];
 
 function renderTech (tech) {
-  var element = $(`<li class="tech">${tech.name}</li>`);
-  var info = $(`<div class="extra-info hidden">${tech.info}</div>`);
+  var element = $('<li class="tech">' + tech.name + '</li>');
+  var info = $('<div class="extra-info hidden">' + tech.info + '</div>');
   info.mouseleave(function () {
     $(this).addClass('hidden');
   });
@@ -43,7 +43,7 @@ function renderTech (tech) {
   return element;
 }
 
-$(() => {
+$(function () {
   $('section').click(function () {
     if ($(this).hasClass('active')) {
       return true;
@@ -54,13 +54,13 @@ $(() => {
     }
   });
 
-  $('#toggle-course-list-math').click((event) => {
+  $('#toggle-course-list-math').click(function (event) {
     $('#course-list-cs').addClass('hidden');
     $('#course-list-math').toggleClass('hidden');
     return false;
   });
 
-  $('#toggle-course-list-cs').click((event) => {
+  $('#toggle-course-list-cs').click(function (event) {
     $('#course-list-math').addClass('hidden');
     $('#course-list-cs').toggleClass('hidden');
     return false;
